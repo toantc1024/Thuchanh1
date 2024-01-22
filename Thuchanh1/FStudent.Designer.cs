@@ -50,7 +50,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblGrade = new System.Windows.Forms.Label();
+            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtLowerGrade = new System.Windows.Forms.TextBox();
+            this.txtUpperGrade = new System.Windows.Forms.TextBox();
+            this.lblGreaterThan = new System.Windows.Forms.Label();
+            this.lblLessThan = new System.Windows.Forms.Label();
+            this.gbFilterByGrade = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
+            this.gbFilterByGrade.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFullName
@@ -112,7 +121,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(11, 313);
+            this.btnAdd.Location = new System.Drawing.Point(12, 353);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(59, 35);
             this.btnAdd.TabIndex = 8;
@@ -122,7 +131,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(140, 313);
+            this.btnEdit.Location = new System.Drawing.Point(141, 353);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(58, 35);
             this.btnEdit.TabIndex = 9;
@@ -132,7 +141,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(76, 313);
+            this.btnDelete.Location = new System.Drawing.Point(77, 353);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(58, 35);
             this.btnDelete.TabIndex = 10;
@@ -180,9 +189,9 @@
             // 
             // btnChangeTeacherForm
             // 
-            this.btnChangeTeacherForm.Location = new System.Drawing.Point(723, 325);
+            this.btnChangeTeacherForm.Location = new System.Drawing.Point(723, 326);
             this.btnChangeTeacherForm.Name = "btnChangeTeacherForm";
-            this.btnChangeTeacherForm.Size = new System.Drawing.Size(178, 23);
+            this.btnChangeTeacherForm.Size = new System.Drawing.Size(178, 62);
             this.btnChangeTeacherForm.TabIndex = 17;
             this.btnChangeTeacherForm.Text = "Change to Teacher Form";
             this.btnChangeTeacherForm.UseVisualStyleBackColor = true;
@@ -246,12 +255,86 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Email:";
             // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.Location = new System.Drawing.Point(19, 231);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(36, 13);
+            this.lblGrade.TabIndex = 48;
+            this.lblGrade.Text = "Grade";
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Location = new System.Drawing.Point(124, 231);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(255, 20);
+            this.txtGrade.TabIndex = 49;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(295, 40);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(66, 23);
+            this.btnSubmit.TabIndex = 0;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // txtLowerGrade
+            // 
+            this.txtLowerGrade.Location = new System.Drawing.Point(13, 40);
+            this.txtLowerGrade.Name = "txtLowerGrade";
+            this.txtLowerGrade.Size = new System.Drawing.Size(129, 20);
+            this.txtLowerGrade.TabIndex = 50;
+            // 
+            // txtUpperGrade
+            // 
+            this.txtUpperGrade.Location = new System.Drawing.Point(148, 40);
+            this.txtUpperGrade.Name = "txtUpperGrade";
+            this.txtUpperGrade.Size = new System.Drawing.Size(144, 20);
+            this.txtUpperGrade.TabIndex = 51;
+            // 
+            // lblGreaterThan
+            // 
+            this.lblGreaterThan.AutoSize = true;
+            this.lblGreaterThan.Location = new System.Drawing.Point(10, 24);
+            this.lblGreaterThan.Name = "lblGreaterThan";
+            this.lblGreaterThan.Size = new System.Drawing.Size(66, 13);
+            this.lblGreaterThan.TabIndex = 52;
+            this.lblGreaterThan.Text = "Greater than";
+            // 
+            // lblLessThan
+            // 
+            this.lblLessThan.AutoSize = true;
+            this.lblLessThan.Location = new System.Drawing.Point(145, 24);
+            this.lblLessThan.Name = "lblLessThan";
+            this.lblLessThan.Size = new System.Drawing.Size(53, 13);
+            this.lblLessThan.TabIndex = 53;
+            this.lblLessThan.Text = "Less than";
+            // 
+            // gbFilterByGrade
+            // 
+            this.gbFilterByGrade.Controls.Add(this.lblGreaterThan);
+            this.gbFilterByGrade.Controls.Add(this.lblLessThan);
+            this.gbFilterByGrade.Controls.Add(this.btnSubmit);
+            this.gbFilterByGrade.Controls.Add(this.txtLowerGrade);
+            this.gbFilterByGrade.Controls.Add(this.txtUpperGrade);
+            this.gbFilterByGrade.Location = new System.Drawing.Point(11, 257);
+            this.gbFilterByGrade.Name = "gbFilterByGrade";
+            this.gbFilterByGrade.Size = new System.Drawing.Size(367, 79);
+            this.gbFilterByGrade.TabIndex = 54;
+            this.gbFilterByGrade.TabStop = false;
+            this.gbFilterByGrade.Text = "Filter by grade";
+            // 
             // FStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(913, 366);
+            this.ClientSize = new System.Drawing.Size(913, 400);
+            this.Controls.Add(this.txtGrade);
+            this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.cboSex);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmail);
@@ -273,10 +356,13 @@
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.lblFullName);
+            this.Controls.Add(this.gbFilterByGrade);
             this.Name = "FStudent";
             this.Text = "Student management";
             this.Load += new System.EventHandler(this.FStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
+            this.gbFilterByGrade.ResumeLayout(false);
+            this.gbFilterByGrade.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +392,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblGrade;
+        private System.Windows.Forms.TextBox txtGrade;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox txtLowerGrade;
+        private System.Windows.Forms.TextBox txtUpperGrade;
+        private System.Windows.Forms.Label lblGreaterThan;
+        private System.Windows.Forms.Label lblLessThan;
+        private System.Windows.Forms.GroupBox gbFilterByGrade;
     }
 }
 
