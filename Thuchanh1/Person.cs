@@ -63,12 +63,12 @@ namespace Thuchanh1
             return string.Format("'{0}', '{1}', '{2}', '{3}', '{4}'", fullName, address, governmentId, dateOfBirth.ToShortDateString(), phoneNumber);
         }
 
-        public string fullName { get; private set; }
-        public string sex { get; private set; }
-        public string email { get; private set; }
-        public string phoneNumber { get; private set; }
-        public DateTime dateOfBirth { get; private set; }
-        public string governmentId { get; private set; }
-        public string address { get; private set; }
+        public string fullName;
+        public string sex;
+        public string email;
+        public string phoneNumber;
+        public DateTime dateOfBirth;
+        public string governmentId;
+        public string address;                      
     }
 }
