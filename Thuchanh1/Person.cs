@@ -9,7 +9,6 @@ namespace Thuchanh1
 {
     public class Person
     {
-        public int b;
         public Person(string fullName, string address, string governmentId, DateTime dt, string phoneNumber, string email, string sex)
         {
             this.governmentId = governmentId;
