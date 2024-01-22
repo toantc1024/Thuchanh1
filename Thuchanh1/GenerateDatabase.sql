@@ -17,6 +17,7 @@ CREATE TABLE Student (
 	phoneNumber varchar(20),
 	email varchar(30),
 	sex varchar(10),
+	grade float
 );
 select * from Student;
 
@@ -32,5 +33,6 @@ CREATE TABLE Teacher (
 	phoneNumber varchar(20),
 	email varchar(30),
 	sex varchar(10),
+	grade float
 );
 select * from Teacher;

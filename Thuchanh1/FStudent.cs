@@ -48,7 +48,7 @@ namespace Thuchanh1
         {
             try
             {
-                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text);
+                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text, float.Parse(txtGrade.Text));
                 studentDAO.Add(student);
                 LoadDataFromStudentDAO();
             } catch (Exception ex)
@@ -82,7 +82,7 @@ namespace Thuchanh1
         {
             try
             {
-                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text);
+                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text, float.Parse(txtGrade.Text));
                 studentDAO.Edit(student);
                 LoadDataFromStudentDAO();
             }
@@ -115,5 +115,12 @@ namespace Thuchanh1
             LoadDataFromStudentDAO();
         }
 
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            DataTable students = studentDAO.FilterStudentByGrade(txtLowerGrade.Text, txtUpperGrade.Text);
+            gvStudents.DataSource = students;
+
+        }
     }
 }
