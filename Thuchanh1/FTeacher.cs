@@ -50,8 +50,6 @@ namespace Thuchanh1
             }
         }
 
-
-
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
