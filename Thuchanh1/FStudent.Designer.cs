@@ -65,65 +65,73 @@
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(13, 50);
+            this.lblFullName.Location = new System.Drawing.Point(17, 62);
+            this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(55, 13);
+            this.lblFullName.Size = new System.Drawing.Size(68, 16);
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Full name:";
             // 
             // lblIdentity
             // 
             this.lblIdentity.AutoSize = true;
-            this.lblIdentity.Location = new System.Drawing.Point(12, 106);
+            this.lblIdentity.Location = new System.Drawing.Point(16, 130);
+            this.lblIdentity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdentity.Name = "lblIdentity";
-            this.lblIdentity.Size = new System.Drawing.Size(82, 13);
+            this.lblIdentity.Size = new System.Drawing.Size(99, 16);
             this.lblIdentity.TabIndex = 1;
             this.lblIdentity.Text = "Government ID:";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(13, 80);
+            this.lblAddress.Location = new System.Drawing.Point(17, 98);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(48, 13);
+            this.lblAddress.Size = new System.Drawing.Size(61, 16);
             this.lblAddress.TabIndex = 2;
             this.lblAddress.Text = "Address:";
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(126, 47);
+            this.txtFullName.Location = new System.Drawing.Point(168, 58);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(254, 20);
+            this.txtFullName.Size = new System.Drawing.Size(337, 22);
             this.txtFullName.TabIndex = 3;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(125, 73);
+            this.txtAddress.Location = new System.Drawing.Point(167, 90);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(254, 20);
+            this.txtAddress.Size = new System.Drawing.Size(337, 22);
             this.txtAddress.TabIndex = 5;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(124, 99);
+            this.txtID.Location = new System.Drawing.Point(165, 122);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(254, 20);
+            this.txtID.Size = new System.Drawing.Size(337, 22);
             this.txtID.TabIndex = 6;
             // 
             // lblBirthDate
             // 
             this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Location = new System.Drawing.Point(16, 130);
+            this.lblBirthDate.Location = new System.Drawing.Point(21, 160);
+            this.lblBirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(52, 13);
+            this.lblBirthDate.Size = new System.Drawing.Size(63, 16);
             this.lblBirthDate.TabIndex = 7;
             this.lblBirthDate.Text = "Birthdate:";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 353);
+            this.btnAdd.Location = new System.Drawing.Point(16, 434);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(59, 35);
+            this.btnAdd.Size = new System.Drawing.Size(79, 43);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -131,9 +139,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(141, 353);
+            this.btnEdit.Location = new System.Drawing.Point(188, 434);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(58, 35);
+            this.btnEdit.Size = new System.Drawing.Size(77, 43);
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -141,9 +150,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(77, 353);
+            this.btnDelete.Location = new System.Drawing.Point(103, 434);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(58, 35);
+            this.btnDelete.Size = new System.Drawing.Size(77, 43);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -153,19 +163,21 @@
             // 
             this.dtpBirthDate.CustomFormat = "dd/MM/yyyy";
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(126, 125);
+            this.dtpBirthDate.Location = new System.Drawing.Point(168, 154);
+            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(254, 20);
+            this.dtpBirthDate.Size = new System.Drawing.Size(337, 22);
             this.dtpBirthDate.TabIndex = 11;
             // 
             // gvStudents
             // 
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvStudents.Location = new System.Drawing.Point(402, 12);
+            this.gvStudents.Location = new System.Drawing.Point(536, 15);
+            this.gvStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowHeadersWidth = 51;
             this.gvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvStudents.Size = new System.Drawing.Size(499, 292);
+            this.gvStudents.Size = new System.Drawing.Size(665, 359);
             this.gvStudents.TabIndex = 12;
             this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvStudents_CellContentClick);
             this.gvStudents.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvStudents_CellContentClick);
@@ -173,25 +185,28 @@
             // lbl_UUID
             // 
             this.lbl_UUID.AutoSize = true;
-            this.lbl_UUID.Location = new System.Drawing.Point(14, 20);
+            this.lbl_UUID.Location = new System.Drawing.Point(19, 25);
+            this.lbl_UUID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_UUID.Name = "lbl_UUID";
-            this.lbl_UUID.Size = new System.Drawing.Size(34, 13);
+            this.lbl_UUID.Size = new System.Drawing.Size(40, 16);
             this.lbl_UUID.TabIndex = 15;
             this.lbl_UUID.Text = "UUID";
             // 
             // lbl_ID
             // 
             this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(123, 20);
+            this.lbl_ID.Location = new System.Drawing.Point(164, 25);
+            this.lbl_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(0, 13);
+            this.lbl_ID.Size = new System.Drawing.Size(0, 16);
             this.lbl_ID.TabIndex = 16;
             // 
             // btnChangeTeacherForm
             // 
-            this.btnChangeTeacherForm.Location = new System.Drawing.Point(723, 326);
+            this.btnChangeTeacherForm.Location = new System.Drawing.Point(964, 401);
+            this.btnChangeTeacherForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeTeacherForm.Name = "btnChangeTeacherForm";
-            this.btnChangeTeacherForm.Size = new System.Drawing.Size(178, 62);
+            this.btnChangeTeacherForm.Size = new System.Drawing.Size(237, 76);
             this.btnChangeTeacherForm.TabIndex = 17;
             this.btnChangeTeacherForm.Text = "Change to Teacher Form";
             this.btnChangeTeacherForm.UseVisualStyleBackColor = true;
@@ -199,19 +214,18 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(126, 150);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(168, 185);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(255, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(339, 22);
             this.txtPhoneNumber.TabIndex = 37;
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(17, 155);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(23, 191);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(79, 13);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(97, 16);
             this.lblPhoneNumber.TabIndex = 36;
             this.lblPhoneNumber.Text = "Phone number:";
             // 
@@ -222,60 +236,62 @@
             "Male",
             "Female",
             "Other"});
-            this.cboSex.Location = new System.Drawing.Point(126, 201);
+            this.cboSex.Location = new System.Drawing.Point(168, 247);
+            this.cboSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(252, 21);
+            this.cboSex.Size = new System.Drawing.Size(335, 24);
             this.cboSex.TabIndex = 47;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(21, 247);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 46;
             this.label3.Text = "Sex: ";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(125, 174);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(167, 214);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(255, 20);
+            this.txtEmail.Size = new System.Drawing.Size(339, 22);
             this.txtEmail.TabIndex = 45;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 177);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(21, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 44;
             this.label2.Text = "Email:";
             // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(19, 231);
+            this.lblGrade.Location = new System.Drawing.Point(25, 284);
+            this.lblGrade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(36, 13);
+            this.lblGrade.Size = new System.Drawing.Size(45, 16);
             this.lblGrade.TabIndex = 48;
             this.lblGrade.Text = "Grade";
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(124, 231);
+            this.txtGrade.Location = new System.Drawing.Point(165, 284);
+            this.txtGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(255, 20);
+            this.txtGrade.Size = new System.Drawing.Size(339, 22);
             this.txtGrade.TabIndex = 49;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(295, 40);
+            this.btnSubmit.Location = new System.Drawing.Point(393, 49);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(66, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(88, 28);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -283,33 +299,37 @@
             // 
             // txtLowerGrade
             // 
-            this.txtLowerGrade.Location = new System.Drawing.Point(13, 40);
+            this.txtLowerGrade.Location = new System.Drawing.Point(17, 49);
+            this.txtLowerGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLowerGrade.Name = "txtLowerGrade";
-            this.txtLowerGrade.Size = new System.Drawing.Size(129, 20);
+            this.txtLowerGrade.Size = new System.Drawing.Size(171, 22);
             this.txtLowerGrade.TabIndex = 50;
             // 
             // txtUpperGrade
             // 
-            this.txtUpperGrade.Location = new System.Drawing.Point(148, 40);
+            this.txtUpperGrade.Location = new System.Drawing.Point(197, 49);
+            this.txtUpperGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUpperGrade.Name = "txtUpperGrade";
-            this.txtUpperGrade.Size = new System.Drawing.Size(144, 20);
+            this.txtUpperGrade.Size = new System.Drawing.Size(191, 22);
             this.txtUpperGrade.TabIndex = 51;
             // 
             // lblGreaterThan
             // 
             this.lblGreaterThan.AutoSize = true;
-            this.lblGreaterThan.Location = new System.Drawing.Point(10, 24);
+            this.lblGreaterThan.Location = new System.Drawing.Point(13, 30);
+            this.lblGreaterThan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGreaterThan.Name = "lblGreaterThan";
-            this.lblGreaterThan.Size = new System.Drawing.Size(66, 13);
+            this.lblGreaterThan.Size = new System.Drawing.Size(80, 16);
             this.lblGreaterThan.TabIndex = 52;
             this.lblGreaterThan.Text = "Greater than";
             // 
             // lblLessThan
             // 
             this.lblLessThan.AutoSize = true;
-            this.lblLessThan.Location = new System.Drawing.Point(145, 24);
+            this.lblLessThan.Location = new System.Drawing.Point(193, 30);
+            this.lblLessThan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLessThan.Name = "lblLessThan";
-            this.lblLessThan.Size = new System.Drawing.Size(53, 13);
+            this.lblLessThan.Size = new System.Drawing.Size(64, 16);
             this.lblLessThan.TabIndex = 53;
             this.lblLessThan.Text = "Less than";
             // 
@@ -320,19 +340,21 @@
             this.gbFilterByGrade.Controls.Add(this.btnSubmit);
             this.gbFilterByGrade.Controls.Add(this.txtLowerGrade);
             this.gbFilterByGrade.Controls.Add(this.txtUpperGrade);
-            this.gbFilterByGrade.Location = new System.Drawing.Point(11, 257);
+            this.gbFilterByGrade.Location = new System.Drawing.Point(15, 316);
+            this.gbFilterByGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbFilterByGrade.Name = "gbFilterByGrade";
-            this.gbFilterByGrade.Size = new System.Drawing.Size(367, 79);
+            this.gbFilterByGrade.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFilterByGrade.Size = new System.Drawing.Size(489, 97);
             this.gbFilterByGrade.TabIndex = 54;
             this.gbFilterByGrade.TabStop = false;
             this.gbFilterByGrade.Text = "Filter by grade";
             // 
             // FStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(913, 400);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(1217, 492);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.cboSex);
@@ -357,6 +379,7 @@
             this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.gbFilterByGrade);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FStudent";
             this.Text = "Student management";
             this.Load += new System.EventHandler(this.FStudent_Load);
