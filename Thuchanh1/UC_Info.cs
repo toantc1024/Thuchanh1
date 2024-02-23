@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace Thuchanh1
 {
-    public partial class FPerson : Form
+    public partial class UC_Info : UserControl
     {
-        public FPerson()
+        public UC_Info()
         {
             InitializeComponent();
         }
 
-        private void ucInformation1_Load(object sender, EventArgs e)
+        private void UC_Info_Load(object sender, EventArgs e)
         {
+
         }
     }
 }

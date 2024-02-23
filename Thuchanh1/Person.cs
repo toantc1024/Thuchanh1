@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -22,19 +24,43 @@ namespace Thuchanh1
         }
 
 
+        private bool isEmpty(string str)
+        {
+            string testStr = str.Trim();
+            return string.IsNullOrEmpty(testStr);
+        }
+
+        public void isBlankValidate()
+        {
+            PropertyInfo[] properties = this.GetType().GetProperties();
+            foreach (PropertyInfo property in properties)
+            {
+                if (property.PropertyType == typeof(string))
+                {
+                    string value = (string)property.GetValue(this);
+                    if (isEmpty(value))
+                    {
+                        throw new Exception(property.Name + " is empty");
+                    }
+                }
+            }
+
+        }
+
         public void Validator()
         {
-            if(!(governmentId.Length > 0 || address.Length > 0 || fullName.Length > 0 || phoneNumber.Length > 0 || email.Length > 0 || sex.Length > 0))
+            // check whether governMentId, address, phoneNumber, ... is not empty string 
+
+            // loop throguh properties of this class
+            isBlankValidate();
+
+            if (getAge() < 17)
             {
-                throw new Exception("We couldn't update your data with blank field!");
-            }
-            if(getAge() < 18)
-            {
-                throw new Exception("Under 18 year old");
+                throw new Exception("Age must >= 17");
             }
             if (!IsValidPhoneNumber())
             {
-                throw new Exception("The number phone isn't valid (VN Format)");
+                throw new Exception("The number phone isn't valid (xxx-xxxx-xxx) - x is number!");
             }
             if(!IsValidEmail())
             {
@@ -43,7 +69,7 @@ namespace Thuchanh1
         }
         private bool IsValidPhoneNumber()
         {
-            string regex = @"^0[12356789]\d{8}$";
+            string regex = @"^\(?([0-9]{3})\)?[-]([0-9]{4})[-]([0-9]{3})$";
             return Regex.IsMatch(phoneNumber, regex);
         }
 

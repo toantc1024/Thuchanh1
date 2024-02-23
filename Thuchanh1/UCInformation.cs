@@ -21,5 +21,20 @@ namespace Thuchanh1
         {
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cboSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

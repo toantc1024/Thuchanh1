@@ -15,41 +15,48 @@ namespace Thuchanh1
     public partial class FStudent : Form
     {
         StudentDAO studentDAO = new StudentDAO();
-        
+       
         public FStudent()
         {
             InitializeComponent();
+            ucInfo_Student.BtnAdd.Click += BtnAdd_Click;
+            ucInfo_Student.BtnDelete.Click += BtnDelete_Click;
+            ucInfo_Student.BtnEdit.Click += BtnEdit_Click;
+            ucInfo_Student.BtnSubmit.Click += btnSubmit_Click;
+            //ucInfo_Student.BtnChangeTeacherForm.Click += BtnChangeTeacherForm_Click;
+            ucInfo_Student.GvData.CellContentClick += GvStudents_CellContentClick;
+            ucInfo_Student.GvData.CellClick += GvStudents_CellContentClick;
         }
 
         public void LoadDataFromStudentDAO()
         {
             DataTable dtSinhVien = studentDAO.Load();
-            gvStudents.DataSource = dtSinhVien;
+            ucInfo_Student.GvData.DataSource = dtSinhVien;
         }
 
 
         public void LoadDataFromRow(DataGridViewRow row)
         {
-            lbl_ID.Text = row.Cells[0].Value.ToString();
-            txtFullName.Text = row.Cells[1].Value.ToString();
-            txtAddress.Text = row.Cells[2].Value.ToString();
-            txtID.Text = row.Cells[3].Value.ToString();
-            txtPhoneNumber.Text = row.Cells[5].Value.ToString();
-            txtEmail.Text = row.Cells[6].Value.ToString();
-            cboSex.Text = row.Cells[7].Value.ToString();
+            ucInfo_Student.Lbl_ID.Text = row.Cells[0].Value.ToString();
+            ucInfo_Student.TxtFullName.Text = row.Cells[1].Value.ToString();
+            ucInfo_Student.TxtAddress.Text = row.Cells[2].Value.ToString();
+            ucInfo_Student.TxtID.Text = row.Cells[3].Value.ToString();
+            ucInfo_Student.TxtPhoneNumber.Text = row.Cells[5].Value.ToString();
+            ucInfo_Student.TxtEmail.Text = row.Cells[6].Value.ToString();
+            ucInfo_Student.CboSex.Text = row.Cells[7].Value.ToString();
         }
 
         private void GvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadDataFromRow(gvStudents.SelectedRows[0]);
+            LoadDataFromRow(ucInfo_Student.GvData.SelectedRows[0]);
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text, float.Parse(txtGrade.Text));
-                studentDAO.Add(student);
+                Student student = new Student(ucInfo_Student.TxtFullName.Text, ucInfo_Student.TxtID.Text, ucInfo_Student.TxtAddress.Text, ucInfo_Student.DtpBirthDate.Value, ucInfo_Student.TxtPhoneNumber.Text, ucInfo_Student.TxtEmail.Text, ucInfo_Student.CboSex.Text, float.Parse(ucInfo_Student.TxtGrade.Text));
+                studentDAO.Add(student);    
                 LoadDataFromStudentDAO();
             } catch (Exception ex)
             {
@@ -63,7 +70,7 @@ namespace Thuchanh1
         {
             try
             {
-                string id = lbl_ID.Text;
+                string id = ucInfo_Student.Lbl_ID.Text;
                 if(id.Length == 0)
                 {
                     throw new Exception("Could you provide id for me? then I can help you.");
@@ -82,7 +89,9 @@ namespace Thuchanh1
         {
             try
             {
-                Student student = new Student(txtFullName.Text, txtID.Text, txtAddress.Text, dtpBirthDate.Value, txtPhoneNumber.Text, txtEmail.Text, cboSex.Text, float.Parse(txtGrade.Text));
+                Student student = new Student(ucInfo_Student.TxtFullName.Text, ucInfo_Student.TxtID.Text, ucInfo_Student.TxtAddress.Text, ucInfo_Student.DtpBirthDate.Value, ucInfo_Student.TxtPhoneNumber.Text, ucInfo_Student.TxtEmail.Text, ucInfo_Student.CboSex.Text, float.Parse(ucInfo_Student.TxtGrade.Text));
+                
+
                 studentDAO.Edit(student);
                 LoadDataFromStudentDAO();
             }
@@ -94,13 +103,13 @@ namespace Thuchanh1
 
         public void ResetForm()
         {
-            txtAddress.Clear();
-            txtFullName.Clear();
-            txtID.Clear();
-            txtPhoneNumber.Clear();
-            lbl_ID.Text = "";
-            txtEmail.Text = "";
-            cboSex.Text = "";
+            ucInfo_Student.TxtAddress.Clear();
+            ucInfo_Student.TxtFullName.Clear();
+            ucInfo_Student.TxtID.Clear();
+            ucInfo_Student.TxtPhoneNumber.Clear();
+            ucInfo_Student.Lbl_ID.Text = "";
+            ucInfo_Student.TxtEmail.Text = "";
+            ucInfo_Student.CboSex.Text = "";
         }
 
         private void BtnChangeTeacherForm_Click(object sender, EventArgs e)
@@ -118,8 +127,18 @@ namespace Thuchanh1
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DataTable students = studentDAO.FilterStudentByGrade(txtLowerGrade.Text, txtUpperGrade.Text);
-            gvStudents.DataSource = students;
+            DataTable students = studentDAO.FilterStudentByGrade(ucInfo_Student.TxtLowerGrade.Text, ucInfo_Student.TxtUpperGrade.Text);
+            ucInfo_Student.GvData.DataSource = students;
+
+        }
+
+        private void ucInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucInfo_Student_Load(object sender, EventArgs e)
+        {
 
         }
     }

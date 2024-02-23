@@ -1,8 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace Thuchanh1
+﻿namespace Thuchanh1
 {
-    partial class UCInformation
+    partial class UC_Info2
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,10 +29,8 @@ namespace Thuchanh1
         private void InitializeComponent()
         {
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblGreaterThan = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtLowerGrade = new System.Windows.Forms.TextBox();
-            this.txtUpperGrade = new System.Windows.Forms.TextBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.lblLessThan = new System.Windows.Forms.Label();
             this.txtGrade = new System.Windows.Forms.TextBox();
             this.lblGrade = new System.Windows.Forms.Label();
             this.cboSex = new System.Windows.Forms.ComboBox();
@@ -44,7 +40,9 @@ namespace Thuchanh1
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.lbl_UUID = new System.Windows.Forms.Label();
-            this.gvData = new System.Windows.Forms.DataGridView();
+            this.gvStudents = new System.Windows.Forms.DataGridView();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtLowerGrade = new System.Windows.Forms.TextBox();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -56,29 +54,122 @@ namespace Thuchanh1
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblIdentity = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.lblLessThan = new System.Windows.Forms.Label();
+            this.lblGreaterThan = new System.Windows.Forms.Label();
+            this.txtUpperGrade = new System.Windows.Forms.TextBox();
             this.gbFilterByGrade = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.gbFilterByGrade.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(121, 165);
+            this.txtEmail.Location = new System.Drawing.Point(155, 230);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(255, 20);
-            this.txtEmail.TabIndex = 73;
+            this.txtEmail.TabIndex = 96;
             // 
-            // lblGreaterThan
+            // lblLessThan
             // 
-            this.lblGreaterThan.AutoSize = true;
-            this.lblGreaterThan.Location = new System.Drawing.Point(10, 24);
-            this.lblGreaterThan.Name = "lblGreaterThan";
-            this.lblGreaterThan.Size = new System.Drawing.Size(66, 13);
-            this.lblGreaterThan.TabIndex = 52;
-            this.lblGreaterThan.Text = "Greater than";
+            this.lblLessThan.AutoSize = true;
+            this.lblLessThan.Location = new System.Drawing.Point(145, 24);
+            this.lblLessThan.Name = "lblLessThan";
+            this.lblLessThan.Size = new System.Drawing.Size(53, 13);
+            this.lblLessThan.TabIndex = 53;
+            this.lblLessThan.Text = "Less than";
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Location = new System.Drawing.Point(154, 287);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(255, 20);
+            this.txtGrade.TabIndex = 100;
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.Location = new System.Drawing.Point(49, 287);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(36, 13);
+            this.lblGrade.TabIndex = 99;
+            this.lblGrade.Text = "Grade";
+            // 
+            // cboSex
+            // 
+            this.cboSex.FormattingEnabled = true;
+            this.cboSex.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cboSex.Location = new System.Drawing.Point(156, 257);
+            this.cboSex.Name = "cboSex";
+            this.cboSex.Size = new System.Drawing.Size(252, 21);
+            this.cboSex.TabIndex = 98;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 257);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 97;
+            this.label3.Text = "Sex: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 233);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Email:";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(156, 206);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(255, 20);
+            this.txtPhoneNumber.TabIndex = 94;
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(47, 211);
+            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(79, 13);
+            this.lblPhoneNumber.TabIndex = 93;
+            this.lblPhoneNumber.Text = "Phone number:";
+            // 
+            // lbl_ID
+            // 
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Location = new System.Drawing.Point(153, 76);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(0, 13);
+            this.lbl_ID.TabIndex = 92;
+            // 
+            // lbl_UUID
+            // 
+            this.lbl_UUID.AutoSize = true;
+            this.lbl_UUID.Location = new System.Drawing.Point(44, 76);
+            this.lbl_UUID.Name = "lbl_UUID";
+            this.lbl_UUID.Size = new System.Drawing.Size(34, 13);
+            this.lbl_UUID.TabIndex = 91;
+            this.lbl_UUID.Text = "UUID";
+            // 
+            // gvStudents
+            // 
+            this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvStudents.Location = new System.Drawing.Point(432, 68);
+            this.gvStudents.Name = "gvStudents";
+            this.gvStudents.RowHeadersWidth = 51;
+            this.gvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvStudents.Size = new System.Drawing.Size(499, 292);
+            this.gvStudents.TabIndex = 90;
             // 
             // btnSubmit
             // 
@@ -96,209 +187,114 @@ namespace Thuchanh1
             this.txtLowerGrade.Size = new System.Drawing.Size(129, 20);
             this.txtLowerGrade.TabIndex = 50;
             // 
-            // txtUpperGrade
-            // 
-            this.txtUpperGrade.Location = new System.Drawing.Point(148, 40);
-            this.txtUpperGrade.Name = "txtUpperGrade";
-            this.txtUpperGrade.Size = new System.Drawing.Size(144, 20);
-            this.txtUpperGrade.TabIndex = 51;
-            // 
-            // txtGrade
-            // 
-            this.txtGrade.Location = new System.Drawing.Point(120, 222);
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(255, 20);
-            this.txtGrade.TabIndex = 77;
-            // 
-            // lblGrade
-            // 
-            this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(15, 222);
-            this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(36, 13);
-            this.lblGrade.TabIndex = 76;
-            this.lblGrade.Text = "Grade";
-            // 
-            // cboSex
-            // 
-            this.cboSex.FormattingEnabled = true;
-            this.cboSex.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.cboSex.Location = new System.Drawing.Point(122, 192);
-            this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(252, 21);
-            this.cboSex.TabIndex = 75;
-            this.cboSex.SelectedIndexChanged += new System.EventHandler(this.cboSex_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Sex: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 168);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 72;
-            this.label2.Text = "Email:";
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(122, 141);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(255, 20);
-            this.txtPhoneNumber.TabIndex = 71;
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(13, 146);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(79, 13);
-            this.lblPhoneNumber.TabIndex = 70;
-            this.lblPhoneNumber.Text = "Phone number:";
-            // 
-            // lbl_ID
-            // 
-            this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(119, 11);
-            this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(0, 13);
-            this.lbl_ID.TabIndex = 68;
-            // 
-            // lbl_UUID
-            // 
-            this.lbl_UUID.AutoSize = true;
-            this.lbl_UUID.Location = new System.Drawing.Point(10, 11);
-            this.lbl_UUID.Name = "lbl_UUID";
-            this.lbl_UUID.Size = new System.Drawing.Size(34, 13);
-            this.lbl_UUID.TabIndex = 67;
-            this.lbl_UUID.Text = "UUID";
-            // 
-            // gvData
-            // 
-            this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvData.Location = new System.Drawing.Point(398, 3);
-            this.gvData.Name = "gvData";
-            this.gvData.RowHeadersWidth = 51;
-            this.gvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvData.Size = new System.Drawing.Size(518, 292);
-            this.gvData.TabIndex = 66;
-            this.gvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
-            // 
             // dtpBirthDate
             // 
             this.dtpBirthDate.CustomFormat = "dd/MM/yyyy";
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(122, 116);
+            this.dtpBirthDate.Location = new System.Drawing.Point(156, 181);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(254, 20);
-            this.dtpBirthDate.TabIndex = 65;
+            this.dtpBirthDate.TabIndex = 89;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(73, 344);
+            this.btnDelete.Location = new System.Drawing.Point(107, 409);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(58, 35);
-            this.btnDelete.TabIndex = 64;
+            this.btnDelete.TabIndex = 88;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(137, 344);
+            this.btnEdit.Location = new System.Drawing.Point(171, 409);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(58, 35);
-            this.btnEdit.TabIndex = 63;
+            this.btnEdit.TabIndex = 87;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(8, 344);
+            this.btnAdd.Location = new System.Drawing.Point(42, 409);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(59, 35);
-            this.btnAdd.TabIndex = 62;
+            this.btnAdd.TabIndex = 86;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // lblBirthDate
             // 
             this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Location = new System.Drawing.Point(12, 121);
+            this.lblBirthDate.Location = new System.Drawing.Point(46, 186);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(52, 13);
-            this.lblBirthDate.TabIndex = 61;
+            this.lblBirthDate.TabIndex = 85;
             this.lblBirthDate.Text = "Birthdate:";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(120, 90);
+            this.txtID.Location = new System.Drawing.Point(154, 155);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(254, 20);
-            this.txtID.TabIndex = 60;
+            this.txtID.TabIndex = 84;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(121, 64);
+            this.txtAddress.Location = new System.Drawing.Point(155, 129);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(254, 20);
-            this.txtAddress.TabIndex = 59;
+            this.txtAddress.TabIndex = 83;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(122, 38);
+            this.txtFullName.Location = new System.Drawing.Point(156, 103);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(254, 20);
-            this.txtFullName.TabIndex = 58;
+            this.txtFullName.TabIndex = 82;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(9, 71);
+            this.lblAddress.Location = new System.Drawing.Point(43, 136);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(48, 13);
-            this.lblAddress.TabIndex = 57;
+            this.lblAddress.TabIndex = 81;
             this.lblAddress.Text = "Address:";
             // 
             // lblIdentity
             // 
             this.lblIdentity.AutoSize = true;
-            this.lblIdentity.Location = new System.Drawing.Point(8, 97);
+            this.lblIdentity.Location = new System.Drawing.Point(42, 162);
             this.lblIdentity.Name = "lblIdentity";
             this.lblIdentity.Size = new System.Drawing.Size(82, 13);
-            this.lblIdentity.TabIndex = 56;
+            this.lblIdentity.TabIndex = 80;
             this.lblIdentity.Text = "Government ID:";
             // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(9, 41);
+            this.lblFullName.Location = new System.Drawing.Point(43, 106);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(55, 13);
-            this.lblFullName.TabIndex = 55;
+            this.lblFullName.TabIndex = 79;
             this.lblFullName.Text = "Full name:";
             // 
-            // lblLessThan
+            // lblGreaterThan
             // 
-            this.lblLessThan.AutoSize = true;
-            this.lblLessThan.Location = new System.Drawing.Point(145, 24);
-            this.lblLessThan.Name = "lblLessThan";
-            this.lblLessThan.Size = new System.Drawing.Size(53, 13);
-            this.lblLessThan.TabIndex = 53;
-            this.lblLessThan.Text = "Less than";
+            this.lblGreaterThan.AutoSize = true;
+            this.lblGreaterThan.Location = new System.Drawing.Point(10, 24);
+            this.lblGreaterThan.Name = "lblGreaterThan";
+            this.lblGreaterThan.Size = new System.Drawing.Size(66, 13);
+            this.lblGreaterThan.TabIndex = 52;
+            this.lblGreaterThan.Text = "Greater than";
+            // 
+            // txtUpperGrade
+            // 
+            this.txtUpperGrade.Location = new System.Drawing.Point(148, 40);
+            this.txtUpperGrade.Name = "txtUpperGrade";
+            this.txtUpperGrade.Size = new System.Drawing.Size(144, 20);
+            this.txtUpperGrade.TabIndex = 51;
             // 
             // gbFilterByGrade
             // 
@@ -307,14 +303,14 @@ namespace Thuchanh1
             this.gbFilterByGrade.Controls.Add(this.btnSubmit);
             this.gbFilterByGrade.Controls.Add(this.txtLowerGrade);
             this.gbFilterByGrade.Controls.Add(this.txtUpperGrade);
-            this.gbFilterByGrade.Location = new System.Drawing.Point(7, 248);
+            this.gbFilterByGrade.Location = new System.Drawing.Point(41, 313);
             this.gbFilterByGrade.Name = "gbFilterByGrade";
             this.gbFilterByGrade.Size = new System.Drawing.Size(367, 79);
-            this.gbFilterByGrade.TabIndex = 78;
+            this.gbFilterByGrade.TabIndex = 101;
             this.gbFilterByGrade.TabStop = false;
             this.gbFilterByGrade.Text = "Filter by grade";
             // 
-            // UCInformation
+            // UC_Info2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,7 +324,7 @@ namespace Thuchanh1
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.lbl_ID);
             this.Controls.Add(this.lbl_UUID);
-            this.Controls.Add(this.gvData);
+            this.Controls.Add(this.gvStudents);
             this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -341,10 +337,9 @@ namespace Thuchanh1
             this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.gbFilterByGrade);
-            this.Name = "UCInformation";
-            this.Size = new System.Drawing.Size(925, 390);
-            this.Load += new System.EventHandler(this.UCInformation_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
+            this.Name = "UC_Info2";
+            this.Size = new System.Drawing.Size(973, 513);
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
             this.gbFilterByGrade.ResumeLayout(false);
             this.gbFilterByGrade.PerformLayout();
             this.ResumeLayout(false);
@@ -355,10 +350,8 @@ namespace Thuchanh1
         #endregion
 
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblGreaterThan;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox txtLowerGrade;
-        private System.Windows.Forms.TextBox txtUpperGrade;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Label lblLessThan;
         private System.Windows.Forms.TextBox txtGrade;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.ComboBox cboSex;
@@ -368,7 +361,9 @@ namespace Thuchanh1
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.Label lbl_UUID;
-        private System.Windows.Forms.DataGridView gvData;
+        private System.Windows.Forms.DataGridView gvStudents;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox txtLowerGrade;
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
@@ -380,39 +375,8 @@ namespace Thuchanh1
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblIdentity;
         private System.Windows.Forms.Label lblFullName;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Label lblLessThan;
+        private System.Windows.Forms.Label lblGreaterThan;
+        private System.Windows.Forms.TextBox txtUpperGrade;
         private System.Windows.Forms.GroupBox gbFilterByGrade;
-
-        public TextBox TxtEmail { get => txtEmail; set => txtEmail=value; }
-        public Label LblGreaterThan { get => lblGreaterThan; set => lblGreaterThan=value; }
-        public Button BtnSubmit { get => btnSubmit; set => btnSubmit=value; }
-        public TextBox TxtLowerGrade { get => txtLowerGrade; set => txtLowerGrade=value; }
-        public TextBox TxtUpperGrade { get => txtUpperGrade; set => txtUpperGrade=value; }
-        public TextBox TxtGrade { get => txtGrade; set => txtGrade=value; }
-        public Label LblGrade { get => lblGrade; set => lblGrade=value; }
-        public ComboBox CboSex { get => cboSex; set => cboSex=value; }
-        public Label Label3 { get => label3; set => label3=value; }
-        public Label Label2 { get => label2; set => label2=value; }
-        public TextBox TxtPhoneNumber { get => txtPhoneNumber; set => txtPhoneNumber=value; }
-        public Label LblPhoneNumber { get => lblPhoneNumber; set => lblPhoneNumber=value; }
-        //public Button BtnChangeTeacherForm { get => btnChangeTeacherForm; set => btnChangeTeacherForm=value; }
-        public Label Lbl_ID { get => lbl_ID; set => lbl_ID=value; }
-        public Label Lbl_UUID { get => lbl_UUID; set => lbl_UUID=value; }
-        public DataGridView GvData { get => gvData; set => gvData=value; }
-        public DateTimePicker DtpBirthDate { get => dtpBirthDate; set => dtpBirthDate=value; }
-        public Button BtnDelete { get => btnDelete; set => btnDelete=value; }
-        public Button BtnEdit { get => btnEdit; set => btnEdit=value; }
-        public Button BtnAdd { get => btnAdd; set => btnAdd=value; }
-        public Label LblBirthDate { get => lblBirthDate; set => lblBirthDate=value; }
-        public TextBox TxtID { get => txtID; set => txtID=value; }
-        public TextBox TxtAddress { get => txtAddress; set => txtAddress=value; }
-        public TextBox TxtFullName { get => txtFullName; set => txtFullName=value; }
-        public Label LblAddress { get => lblAddress; set => lblAddress=value; }
-        public Label LblIdentity { get => lblIdentity; set => lblIdentity=value; }
-        public Label LblFullName { get => lblFullName; set => lblFullName=value; }
-        public FontDialog FontDialog1 { get => fontDialog1; set => fontDialog1=value; }
-        public Label LblLessThan { get => lblLessThan; set => lblLessThan=value; }
-        public GroupBox GbFilterByGrade { get => gbFilterByGrade; set => gbFilterByGrade=value; }
     }
 }
